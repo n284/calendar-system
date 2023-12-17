@@ -27,7 +27,7 @@ export default async function UserTable({ pageNumber }: Props) {
         .neq("user_id", "1")
         .returns<UserType[]>()
         .range(10 * (pageNumber - 1), 10 * pageNumber - 1);
-        
+
     if (!data.data || data.error) {
         return (
             <Error statusCode={500} errorMessage={"データが取得できませんでした。"} />
