@@ -1,4 +1,5 @@
-import { Button, Link } from "@mui/material"
+import { Button } from "@mui/material";
+import Link from "next/link";
 
 type Props = {
     masterName: string,
