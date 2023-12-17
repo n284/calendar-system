@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
 import LinkButton from "./_component/linkButton";
-export default function masterPage() {
+
+export default function MasterPage() {
     return (
         <>
             <Divider>
