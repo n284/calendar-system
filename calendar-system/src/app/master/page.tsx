@@ -9,6 +9,5 @@ export default function MasterPage() {
                 <LinkButton masterName={"company"} buttonName="会社管理" />
             </Divider>
         </>
-
     );
 }
