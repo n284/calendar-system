@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
 import { Suspense } from "react";
 import UserTable from "./_component/userTable";
+import UserTablePagination from "./_component/userTablePagenation";
 
 export default function UserMasterPage() {
     return (
@@ -10,6 +11,7 @@ export default function UserMasterPage() {
             </Divider>
             <Suspense fallback={<h1>Loading...</h1>}>
                 <UserTable pageNumber={1} />
+                <UserTablePagination />
             </Suspense >
         </>
     );

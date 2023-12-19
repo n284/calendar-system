@@ -1,8 +1,16 @@
+import Error from "@/components/error";
 import { supabase } from "@/utilities/supabaseClient";
 import { UserType } from "@/utilities/type";
-import { Divider, Button, TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
 import { PostgrestSingleResponse } from "@supabase/supabase-js";
-import Error from "@/components/error";
 
 type Props = {
     pageNumber: number
