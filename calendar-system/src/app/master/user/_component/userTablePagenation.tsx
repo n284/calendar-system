@@ -1,8 +1,13 @@
 import Pagination from "@mui/material/Pagination";
 import Error from "@/components/error";
 import { supabase } from "@/utilities/supabaseClient";
+import { ChangeEvent } from "react";
 
-export default async function UserTablePagination() {
+type Props = {
+    onChange: (event: ChangeEvent<unknown>, page: number) => void
+};
+
+export default async function UserTablePagination({ onChange }: Props) {
     const count: number | null = (await supabase
         .from("user_master")
         .select("*", {
@@ -17,6 +22,6 @@ export default async function UserTablePagination() {
     }
 
     return (
-        <Pagination count={count / 10} showFirstButton showLastButton />
+        <Pagination count={count / 10} showFirstButton showLastButton onChange={onChange} />
     );
 }
